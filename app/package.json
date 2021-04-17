@@ -9,7 +9,7 @@
     "templateVersion": "0.26.99",
     "devDependencies": {
       "@cubejs-backend/server": "^0.26.99",
-      "@dalongrong/trino-driver": "^1.0.1"
+      "@cubejs-backend/prestodb-driver": "^0.26.99"
     }
   }
   

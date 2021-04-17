@@ -899,7 +899,17 @@
   resolved "https://registry.npm.taobao.org/@cubejs-backend/dotenv/download/@cubejs-backend/dotenv-9.0.2.tgz#c3679091b702f0fd38de120c5a63943fcdc0dcbf"
   integrity sha1-w2eQkbcC8P043hIMWmOUP83A3L8=
 
-"@cubejs-backend/query-orchestrator@^0.26.90", "@cubejs-backend/query-orchestrator@^0.26.99":
+"@cubejs-backend/prestodb-driver@^0.26.99":
+  version "0.26.99"
+  resolved "https://registry.npm.taobao.org/@cubejs-backend/prestodb-driver/download/@cubejs-backend/prestodb-driver-0.26.99.tgz#b22e19a003925b2d2bfb11829a53b83fa2cda76b"
+  integrity sha1-si4ZoAOSWy0r+xGCmlO4P6LNp2s=
+  dependencies:
+    "@cubejs-backend/query-orchestrator" "^0.26.99"
+    presto-client "^0.8.0"
+    ramda "^0.27.0"
+    sqlstring "^2.3.1"
+
+"@cubejs-backend/query-orchestrator@^0.26.99":
   version "0.26.99"
   resolved "https://registry.npm.taobao.org/@cubejs-backend/query-orchestrator/download/@cubejs-backend/query-orchestrator-0.26.99.tgz#fc023242c4faa34579573dd360546c9261c4c471"
   integrity sha1-/AIyQsT6o0V5Vz3TYFRskmHExHE=
@@ -911,7 +921,7 @@
     ramda "^0.27.0"
     redis "^3.0.2"
 
-"@cubejs-backend/schema-compiler@^0.26.87", "@cubejs-backend/schema-compiler@^0.26.95":
+"@cubejs-backend/schema-compiler@^0.26.95":
   version "0.26.95"
   resolved "https://registry.npm.taobao.org/@cubejs-backend/schema-compiler/download/@cubejs-backend/schema-compiler-0.26.95.tgz#72966d73b54279f0f117538e04c18f6f9f0ea905"
   integrity sha1-cpZtc7VCefDxF1OOBMGPb58OqQU=
@@ -1015,22 +1025,6 @@
     node-fetch "^2.6.1"
     ramda "^0.27.1"
     source-map-support "^0.5.19"
-
-"@dalongrong/trino-client@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.npm.taobao.org/@dalongrong/trino-client/download/@dalongrong/trino-client-0.9.0.tgz#57ab698c158a5127065a0d0688ca4d6905a91eae"
-  integrity sha1-V6tpjBWKUScGWg0GiMpNaQWpHq4=
-
-"@dalongrong/trino-driver@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/@dalongrong/trino-driver/download/@dalongrong/trino-driver-1.0.1.tgz#3b530b76bb976650193219d8a1e8fe44ac0dd008"
-  integrity sha1-O1MLdruXZlAZMhnYoej+RKwN0Ag=
-  dependencies:
-    "@cubejs-backend/query-orchestrator" "^0.26.90"
-    "@cubejs-backend/schema-compiler" "^0.26.87"
-    "@dalongrong/trino-client" "^0.9.0"
-    ramda "^0.27.1"
-    sqlstring "^2.3.2"
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -4778,6 +4772,11 @@ prelude-ls@~1.1.2:
   resolved "https://registry.npm.taobao.org/prelude-ls/download/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
+presto-client@^0.8.0:
+  version "0.8.1"
+  resolved "https://registry.npm.taobao.org/presto-client/download/presto-client-0.8.1.tgz#3cc95e678dee00a6bea84c90377757f19e5456f8"
+  integrity sha1-PMleZ43uAKa+qEyQN3dX8Z5UVvg=
+
 prettier@^1.16.4:
   version "1.19.1"
   resolved "https://registry.npm.taobao.org/prettier/download/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
@@ -5403,7 +5402,7 @@ sprintf-js@~1.0.2:
   resolved "https://registry.npm.taobao.org/sprintf-js/download/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
-sqlstring@^2.3.1, sqlstring@^2.3.2:
+sqlstring@^2.3.1:
   version "2.3.2"
   resolved "https://registry.npm.taobao.org/sqlstring/download/sqlstring-2.3.2.tgz#cdae7169389a1375b18e885f2e60b3e460809514"
   integrity sha1-za5xaTiaE3WxjohfLmCz5GCAlRQ=

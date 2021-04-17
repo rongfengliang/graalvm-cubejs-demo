@@ -7,6 +7,8 @@
 
 * init npm deps
 
+> you can also install deps with npm command in docker container
+
 ```code
 cd app
 yarn
@@ -15,6 +17,7 @@ yarn
 * start docker-composer service
 
 ```code
+docker-compose build
 docker-compose up -d
 ```
 
