@@ -1,0 +1,12 @@
+version: "3"
+services:
+    trino:
+      image: trinodb/trino:355
+      volumes:
+      - ./config/config.properties:/etc/trino/config.properties
+      ports:
+      - "8080:8080"
+    cube:
+       build: ./
+       ports: 
+       - "4000:4000"

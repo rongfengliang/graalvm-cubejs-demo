@@ -1,0 +1,15 @@
+{
+    "name": "demoapp",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+      "dev": "cubejs-server"
+    },
+    "template": "docker",
+    "templateVersion": "0.26.99",
+    "devDependencies": {
+      "@cubejs-backend/server": "^0.26.99",
+      "@dalongrong/trino-driver": "^1.0.1"
+    }
+  }
+  
