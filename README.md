@@ -1,26 +1,15 @@
-# graalvm with cube.js
+# redis cache with cube.js
 
-> just for test (use trinodb)
+> use nginx for lb  && k6 for load test 
+
+## load test 
+
+k6 run ab/my-k6-script.js
 
 
-## How to Running
 
-* init npm deps
+## grafana
 
-> you can also install deps with npm command in docker container
+> first need add prometheus and load dash.json file for redis dashboard
 
-```code
-cd app
-yarn
-```
-
-* start docker-composer service
-
-```code
-docker-compose build
-docker-compose up -d
-```
-
-* do some testing
-
-open http://localhost:4000
+http://localhost:3000 
