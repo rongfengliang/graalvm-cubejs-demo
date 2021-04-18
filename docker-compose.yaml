@@ -27,10 +27,6 @@ services:
       - "./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf"
       ports: 
       - "4000:4000"
-    cube:
-       build: ./
-       env_file: 
-        - ./app/.env-docker
     cube2:
        build: 
         dockerfile: Dockerfile2
