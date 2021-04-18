@@ -1,12 +1,43 @@
 version: "3"
 services:
+    grafana:
+     image: grafana/grafana    
+     ports:
+     - "3000:3000"
+    redis-exporter:
+     image: oliver006/redis_exporter
+     command: -redis.addr redis://redis:6379
+     ports:
+      - 9121:9121
+    prometheus:
+      image: prom/prometheus
+      volumes:
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+      ports:
+      - "9090:9090" 
     trino:
       image: trinodb/trino:355
       volumes:
       - ./config/config.properties:/etc/trino/config.properties
       ports:
       - "8080:8080"
+    ingress:
+      image: openresty/openresty:alpine
+      volumes: 
+      - "./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf"
+      ports: 
+      - "4000:4000"
     cube:
        build: ./
-       ports: 
-       - "4000:4000"
+       env_file: 
+        - ./app/.env-docker
+    cube2:
+       build: 
+        dockerfile: Dockerfile2
+        context: .
+       env_file: 
+       - ./app/.env-docker
+    redis:
+       image: redis:5.0-alpine
+       ports:
+       - "6379:6379"
